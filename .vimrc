@@ -24,6 +24,7 @@ Plugin 'markcornick/vim-terraform'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'wincent/command-t'
 
 call vundle#end()
 filetype plugin indent on

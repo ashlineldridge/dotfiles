@@ -98,3 +98,6 @@ alias dm="docker-machine"
 # Fluentd
 alias fluentd-start='sudo launchctl load /Library/LaunchDaemons/td-agent.plist'
 alias fluentd-stop='sudo launchctl unload /Library/LaunchDaemons/td-agent.plist'
+
+# GUID generator with clipboard copy
+alias guid="uuidgen | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste"
