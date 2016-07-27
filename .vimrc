@@ -20,6 +20,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'rust-lang/rust.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/syntastic'
 Plugin 'markcornick/vim-terraform'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
@@ -45,7 +46,7 @@ set incsearch hlsearch
 " Map F6 to toggle Tagbar
 nmap <F8> :TagbarToggle<cr>
 
-" The almighty leader key
+" The almighty leader keys
 let mapleader=";"
 
 " NERDTree configuration and key mappings
@@ -65,15 +66,15 @@ nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " Go development key mappings
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>i <Plug>(go-info)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap gd <Plug>(go-def)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>db :GoDocBrowser<cr>
+au FileType go nmap <leader>ds <Plug>(go-def-split)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>db :GoDocBrowser<cr>
 
 " Tagbar / Gotags configuration
 let g:tagbar_type_go = {
