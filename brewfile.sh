@@ -40,3 +40,9 @@ brew cask install google-cloud-sdk
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Install Ammonite (not in brew yet)
+curl -L -o /usr/local/bin/amm https://git.io/vioDM && chmod +x /usr/local/bin/amm
+
+# Install Hub (Github git helper)
+brew install hub

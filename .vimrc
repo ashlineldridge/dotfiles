@@ -20,7 +20,6 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'rust-lang/rust.vim'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'scrooloose/syntastic'
 Plugin 'markcornick/vim-terraform'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
@@ -37,7 +36,6 @@ set background=dark
 
 " Other codey settings
 syntax on
-set number
 set ts=4
 
 " Search settings

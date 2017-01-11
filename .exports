@@ -28,15 +28,6 @@ export GRADLE_HOME="$(brew --prefix gradle)/libexec"
 # Dot files repository home directory
 export DOTFILES_HOME="$HOME/Development/home/dotfiles"
 
-# Docker remote host
-export DOCKER_HOST="tcp://127.0.0.1:4243"
-
-# AWS CLI tools variables
-#export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-#export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-#export EC2_HOME="$(brew --prefix ec2-api-tools)/libexec"
-#export EC2_URL="https://ec2.ap-southeast-2.amazonaws.com"
-
 # Golang variables
 export GOPATH="$HOME/Development/home/go"
 export GOROOT="$(brew --prefix go)/libexec"

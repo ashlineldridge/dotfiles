@@ -16,3 +16,11 @@ indent_size = 2
 [**.py]
 indent_style = space
 indent_size = 4
+
+[**.gradle]
+indent_style = space
+indent_size = 4
+
+[**.yml]
+indent_style = space
+indent_size = 2
