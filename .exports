@@ -32,8 +32,5 @@ export DOTFILES_HOME="$HOME/Development/home/dotfiles"
 export GOPATH="$HOME/Development/home/go"
 export GOROOT="$(brew --prefix go)/libexec"
 
-# Google Cloud SDK home
-export GCLOUD_HOME="/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-
 # Path
-export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:${GCLOUD_HOME}/bin:${GOROOT}/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin"
+export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:${GOROOT}/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:$(yarn global bin)"

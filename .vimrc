@@ -25,6 +25,7 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'wincent/command-t'
+Plugin 'reasonml/vim-reason-loader'
 
 call vundle#end()
 filetype plugin indent on

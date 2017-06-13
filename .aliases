@@ -106,8 +106,5 @@ alias guid="uuidgen | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste"
 alias gradle-debug-on='export GRADLE_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5007 -Dorg.gradle.daemon=false"'
 alias gradle-debug-off='export GRADLE_OPTS='
 
-# The Fuck command
-eval "$(thefuck --alias)"
-
 # Hub (Github helper) aliased over standard git command
 eval "$(hub alias -s)"
