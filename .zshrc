@@ -22,8 +22,8 @@ for file in ~/.{exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# Enable aws-cli completion
-source /usr/local/share/zsh/site-functions/_aws
+# Enable awscli completion
+source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
 
 # Base16 shell script for configuring colors
 source ~/bin/base16-tomorrow.dark.sh
