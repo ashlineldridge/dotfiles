@@ -27,9 +27,6 @@ brew install jq
 brew install gradle
 brew install groovy
 brew install maven
-brew install rabbitmq
-brew install redis
-brew install dynamodb-local
 
 # Install Homebrew Cask
 brew install caskroom/cask/brew-cask

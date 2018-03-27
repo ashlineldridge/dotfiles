@@ -39,6 +39,9 @@ set background=dark
 syntax on
 set ts=4
 
+" Enable Scala syntax highlighting for .sc files
+au BufReadPost *.sc set syntax=scala
+
 " Search settings
 set incsearch hlsearch
 

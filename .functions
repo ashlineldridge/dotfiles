@@ -34,6 +34,15 @@ function awsauth_with() {
 	printf "Done.\n"
 }
 
+# Useful for decoding JSON that has been gzipped and base-64 encoded
+function decode_b64_gz_json() {
+	if [ $# -ne 1 ]; then
+		printf "You must specify a string to decode.\n"
+		return
+	fi;
+	echo "$1" | base64 -d | gunzip | jq .
+}
+
 # Docker Machine environment variable export function
 function dmenv() {
 	if [ $# -eq 0 ]; then
