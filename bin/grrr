@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker run -ti --rm \
+    -v ~/.aws:/root/.aws \
+    -v /Users/aeldridge/Development/work/devops-aws-auth-saml-linux-osx-bash:/app \
+    infrastructureascode/aws-cli /app/auth.sh

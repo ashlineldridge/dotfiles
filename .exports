@@ -34,3 +34,6 @@ export GOROOT="$(brew --prefix go)/libexec"
 
 # Path
 export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:${GOROOT}/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:$(yarn global bin)"
+
+# Kubernetes
+export KUBECONFIG=~/.kube/config-my-cluster

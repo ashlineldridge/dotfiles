@@ -111,3 +111,7 @@ eval "$(hub alias -s)"
 
 # Parquet Tools
 alias parquet-tools='java -jar ~/bin/parquet-tools-1.9.1-SNAPSHOT.jar'
+
+# Kubernetes
+alias k=kubectl
+

@@ -25,6 +25,9 @@ unset file;
 # Enable awscli completion
 source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
 
+# Enable kubectl completion
+source <(kubectl completion zsh)
+
 # Base16 shell script for configuring colors
 source ~/bin/base16-tomorrow.dark.sh
 
