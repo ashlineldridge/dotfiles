@@ -28,21 +28,14 @@ source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
 # Enable kubectl completion
 source <(kubectl completion zsh)
 
+# Enable kube-ps1
+source $(brew --prefix kube-ps1)/share/kube-ps1.sh
+
 # Base16 shell script for configuring colors
 source ~/bin/base16-tomorrow.dark.sh
-
-# Don't share history between iTerm2 panes
-unsetopt inc_append_history
-unsetopt share_history
 
 # Shortcuts
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 bindkey \^U backward-kill-line
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
