@@ -33,10 +33,10 @@ export GOPATH="$HOME/Development/home/go"
 export GOROOT="$(brew --prefix go)/libexec"
 
 # Path
-export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:${GOROOT}/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:$(yarn global bin)"
+export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:${GOROOT}/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:$(yarn global bin)"
 
 # Kubernetes
 export KUBECONFIG=~/.kube/config
 
 # Kube-ps1 prompt
-export PROMPT="\$(kube_ps1)${PROMPT}"
+#export PROMPT="\$(kube_ps1)${PROMPT}"
