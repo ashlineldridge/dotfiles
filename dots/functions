@@ -3,16 +3,6 @@ function mvim() {
 	open -a /Applications/MacVim.app "$@";
 }
 
-# Capture any dot file changes in the dot files repo
-function capture_dots() {
-	for file in ~/.{aliases,curlrc,editorconfig,exports,functions,gitconfig,gitignore_global,screenrc,vimrc,zshrc}; do
-		[ -r "$file" ] && [ -f "$file" ] && cp "$file" $DOTFILES_HOME;
-	done;
-	for file in ~/bin/*; do
-		[ -r "$file" ] && [ -f "$file" ] && cp "$file" $DOTFILES_HOME/bin;
-	done;
-}
-
 # AWS auths using the credentials in the specified file
 function awsauth_with() {
 	if [ $# -ne 1 ]; then

@@ -9,6 +9,8 @@
 1. Install fonts in `iterm` directory
 1. Make **iTerm** the default shell (from menu)
 1. Install **iTerm** [shell integration](https://www.iterm2.com/shell_integration.html) (from menu)
+1. Update **iTerm** to [load preferences from file](http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/)
+1.
 
 1. Set up **Vim** with:
 ```

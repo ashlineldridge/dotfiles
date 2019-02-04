@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -eou pipefail
+shopt -s extglob
 
 prezto_home="${HOME}/.zprezto"
 repo_home="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
@@ -30,7 +31,7 @@ echo "source ${repo_home}/dots/zshrc" >> "${HOME}/.zshrc"
 
 # Link each of the dotfile repo files into the home directory
 cd "${repo_home}/dots"
-for dot_file in *; do
+for dot_file in !(zshrc); do
   rm -f "${HOME}/.${dot_file}" 2> /dev/null || true
   echo >&2 "Linking ~/.${dot_file}..."
   ln -s "${repo_home}/dots/${dot_file}" "${HOME}/.${dot_file}"
