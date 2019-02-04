@@ -10,18 +10,9 @@
 1. Make **iTerm** the default shell (from menu)
 1. Install **iTerm** [shell integration](https://www.iterm2.com/shell_integration.html) (from menu)
 1. Update **iTerm** to [load preferences from file](http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/)
-1.
-
+1. Restart **iTerm** and make sure Base 16 Tomorrow profile is selected
 1. Set up **Vim** with:
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
-
-2. Run ./brewfile.sh
-3. Run ./setup-vim.sh
-4. Install Oh-my-Zsh
-5. Setup iTerm:
-    - Install fonts in iterm2 directory
-    - Setup iTerm appearance preferences
-    - Create iTerm profiles for Base16 themes (remember to match iTerm theme to .vimrc theme to Base16 shell script that is sourced in .zshrc)
