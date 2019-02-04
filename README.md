@@ -1,9 +1,21 @@
 # Dot Files Repo
 
-Forked from [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles) and customised for my own personal setup.
+**Run sheet**
+1. Install [Homebrew](https://brew.sh)
+1. Install [Prezto](https://github.com/sorin-ionescu/prezto)
+1. Install [iTerm](https://www.iterm2.com/downloads.html)
+1. Run `brew bundle` from the root of this repo
+1. Run `bootstrap.sh` from the root of this repo
+1. Install fonts in `iterm` directory
+1. Make **iTerm** the default shell (from menu)
+1. Install **iTerm** [shell integration](https://www.iterm2.com/shell_integration.html) (from menu)
 
-Steps:
-1. Run ./bootstrap.sh
+1. Set up **Vim** with:
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+```
+
 2. Run ./brewfile.sh
 3. Run ./setup-vim.sh
 4. Install Oh-my-Zsh

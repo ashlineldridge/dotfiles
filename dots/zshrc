@@ -1,0 +1,25 @@
+# DOT_START
+
+# Enable extended globbing
+setopt extended_glob
+
+# Load the shell dotfiles
+# (~/.extra) can be used for other settings you don't want to commit.
+for dot_file in ~/.{exports,aliases,functions,extra}; do
+	source "${dot_file}"
+done
+
+# Enable awscli completion
+source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
+
+# Enable kubectl completion
+source <(kubectl completion zsh)
+
+# Base16 shell script for configuring colors
+source ~/bin/base16-tomorrow.dark.sh
+
+# Shortcuts
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
+bindkey \^U backward-kill-line
+
