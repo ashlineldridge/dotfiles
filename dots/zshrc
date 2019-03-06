@@ -18,8 +18,11 @@ done
 # Base16 shell script for configuring colors
 source ~/bin/base16-tomorrow.dark.sh
 
+# Prompt: https://github.com/sindresorhus/pure
+prompt pure
+
 # Shortcuts
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 bindkey \^U backward-kill-line
-
+bindkey '\e_' insert-last-word

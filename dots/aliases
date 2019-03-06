@@ -4,12 +4,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Override rm=rmi
+unalias rm
+
 # Shortcuts
 alias dev="cd ~/Development"
 alias devh="cd ~/Development/home"
 alias devw="cd ~/Development/work"
 alias devmm="cd ~/Development/work/mm"
-alias devg="cd $GOPATH/src/github.com/ashlineldridge"
+alias devg="cd $GOPATH"
 alias g="git"
 alias h="history"
 alias j="jobs"

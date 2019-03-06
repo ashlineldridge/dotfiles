@@ -29,7 +29,7 @@ export GRADLE_HOME="$(brew --prefix gradle)/libexec"
 export DOTFILES_HOME="$HOME/Development/home/dotfiles"
 
 # Golang variables
-export GOPATH="$HOME/Development/home/go"
+export GOPATH="$HOME/Development/go"
 export GOROOT="$(brew --prefix go)/libexec"
 
 # Path
