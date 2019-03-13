@@ -11,11 +11,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'chriskempson/base16-vim'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
 Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on
+
+" The almighty leader keys
+let mapleader=";"
 
 " Set up the Base16 Tomorrow Dark theme
 let base16colorspace=256
@@ -33,12 +35,6 @@ au BufReadPost *.sc set syntax=scala
 " Search settings
 set incsearch hlsearch
 
-" Map F6 to toggle Tagbar
-nmap <F8> :TagbarToggle<cr>
-
-" The almighty leader keys
-let mapleader=";"
-
 " NERDTree configuration and key mappings
 map <C-n> :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
@@ -46,59 +42,8 @@ map <leader>nf :NERDTreeFind<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "let NERDTreeShowHidden=1
 
-" Supertab configuration
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabClosePreviewOnPopupClose = 1
-
-" Yankstack configuration
-let g:yankstack_map_keys = 0
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
-
-" Go development key mappings
-au FileType go nmap <leader>i <Plug>(go-info)
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap gd <Plug>(go-def)
-au FileType go nmap <leader>ds <Plug>(go-def-split)
-au FileType go nmap <leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <leader>dt <Plug>(go-def-tab)
-au FileType go nmap <leader>db :GoDocBrowser<cr>
-
-" Tagbar / Gotags configuration
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-    \ }
-
 " JSON Beautification
-autocmd FileType json noremap <buffer> <leader>j :call JsonBeautify()<cr>
-autocmd FileType json vnoremap <buffer>  <leader>j :call RangeJsBeautify()<cr>
-
-" TODO:
-" Set up buffer key mappings: http://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
-" Configure Airline status / tabline: https://github.com/bling/vim-airline
+map <leader>j :call JsBeautify()<cr>
+vmap <buffer> <leader>j :call RangeJsBeautify()<cr>
+"autocmd FileType json noremap <buffer> <leader>j :call JsonBeautify()<cr>
+"autocmd FileType json vnoremap <buffer>  <leader>j :call RangeJsBeautify()<cr>
