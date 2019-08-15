@@ -26,7 +26,7 @@ set background=dark
 
 " Other codey settings
 syntax on
-set ts=4
+" set ts=4
 set backspace=indent,eol,start
 
 " Enable Scala syntax highlighting for .sc files

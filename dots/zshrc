@@ -10,7 +10,11 @@ for dot_file in ~/.{exports,aliases,functions,extra}; do
 done
 
 # Enable awscli completion
+# Doesn't seem to need it
 #source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
+
+# Enable gcloud completion
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 # Enable kubectl completion
 #source <(kubectl completion zsh)

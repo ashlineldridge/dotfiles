@@ -79,7 +79,7 @@
 	autocrlf = input
 
 	# Use Vim as the default editor
-	editor = vim
+	editor = nvim
 
 [color]
 
@@ -135,6 +135,8 @@
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
+	insteadOf = https://github.com/
+	insteadOf = https://github.com/
 
 [url "git://github.com/"]
 
@@ -151,10 +153,15 @@
 	insteadOf = "gist:"
 [user]
 	name = Ashlin Eldridge
-	email = aeldridge@seek.com.au
+	email = ashlineldridge@users.noreply.github.com
+	signingkey = AEBD61C2AF32180F
 [credential]
 	helper = osxkeychain
 [pull]
 	rebase = true
 [branch]
 	autosetuprebase = always
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
