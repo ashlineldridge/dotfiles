@@ -13,7 +13,6 @@ alias devh="cd ~/Development/home"
 alias devw="cd ~/Development/work"
 alias devg="cd $GOPATH"
 alias g="git"
-alias h="history"
 alias j="jobs"
 
 # Detect which `ls` flavor is in use
@@ -75,6 +74,16 @@ eval "$(hub alias -s)"
 
 # Kubernetes
 alias k=kubectl
+alias ks='https_proxy=socks5://localhost:8888 kubectl'
+alias kh='https_proxy=http://localhost:8888 kubectl'
+alias h=helm
+alias hs='https_proxy=socks5://localhost:8888 helm'
+alias hh='https_proxy=http://localhost:8888 helm'
 
 # Trying out Neovim
 alias vim=nvim
+
+# Emacs
+alias e=emacs
+alias et='emacs -nw'
+alias enw='emacs -nw'

@@ -78,8 +78,8 @@
 	trustctime = false
 	autocrlf = input
 
-	# Use Vim as the default editor
-	editor = nvim
+	# Use Emacs as the default editor
+	editor = emacs -nw
 
 [color]
 

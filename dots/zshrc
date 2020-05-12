@@ -6,18 +6,8 @@ setopt extended_glob
 # Load the shell dotfiles
 # (~/.extra) can be used for other settings you don't want to commit.
 for dot_file in ~/.{exports,aliases,functions,extra}; do
-	source "${dot_file}"
+  source "${dot_file}"
 done
-
-# Enable awscli completion
-# Doesn't seem to need it
-#source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
-
-# Enable gcloud completion
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-
-# Enable kubectl completion
-#source <(kubectl completion zsh)
 
 # Base16 shell script for configuring colors
 source ~/bin/base16-tomorrow.dark.sh
@@ -30,3 +20,13 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 bindkey \^U backward-kill-line
 bindkey '\e_' insert-last-word
+
+# Enable completion for various commands
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+#source $(brew --prefix awscli)/libexec/bin/aws_zsh_completer.sh
+#source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+# Neither of the below work...
+#source <(kubectl completion zsh)
+#source <(eksctl completion zsh)

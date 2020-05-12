@@ -1,5 +1,5 @@
-# Make vim the default editor
-export EDITOR="vim";
+# Make Emacs the default editor
+export EDITOR="emacs -nw";
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
@@ -33,7 +33,7 @@ export GOPATH="$HOME/Development/go"
 export GOROOT="$(brew --prefix go)/libexec"
 
 # Path
-export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:${GOROOT}/bin:$(brew --prefix gettext)/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:${HOME}/.cargo/bin:$(yarn global bin)"
+export PATH="/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:${GOROOT}/bin:$(brew --prefix gettext)/bin:${GOPATH}/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:${HOME}/bin:${HOME}/.krew/bin:${HOME}/.cargo/bin:$(yarn global bin)"
 
 # Kubernetes
 export KUBECONFIG=~/.kube/config
