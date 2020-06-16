@@ -1,5 +1,5 @@
-# Make Emacs the default editor
-export EDITOR="emacs -nw";
+# Make Vim the default editor
+export EDITOR="vim";
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
@@ -18,15 +18,11 @@ export LESS_TERMCAP_md="${yellow}";
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto";
 
-# Java and Groovy home directories
+# Java home directory
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export GROOVY_HOME="$(brew --prefix groovy)/libexec"
-
-# Gradle home directory
-export GRADLE_HOME="$(brew --prefix gradle)/libexec"
 
 # Dot files repository home directory
-export DOTFILES_HOME="$HOME/Development/home/dotfiles"
+export DOTFILES_HOME="${HOME}/Development/home/dotfiles"
 
 # Golang variables
 export GOPATH="$HOME/Development/go"
@@ -41,5 +37,7 @@ export KUBECONFIG=~/.kube/config
 # Kube-ps1 prompt
 #export PROMPT="\$(kube_ps1)${PROMPT}"
 
-# Ebb V2
-export BASE64_CMD="base64 -d"
+# XDG
+XDG_CONFIG_HOME="${HOME}/.config"
+XDG_CACHE_HOME="${HOME}/.cache"
+XDG_DATA_HOME="${HOME}/.data"

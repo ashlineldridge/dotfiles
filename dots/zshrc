@@ -28,5 +28,10 @@ autoload -U +X bashcompinit && bashcompinit
 #source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 # Neither of the below work...
+source <(kubectl completion zsh | sed '/"-f"/d')
 #source <(kubectl completion zsh)
 #source <(eksctl completion zsh)
+
+# History settings
+unsetopt inc_append_history
+unsetopt share_history
